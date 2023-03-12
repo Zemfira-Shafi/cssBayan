@@ -1,1 +1,92 @@
+html {
+  font-size: 10px;
+}
 
+body {
+  margin: 0;
+  padding: 0;
+  background-color: grey;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
+.accordion-wrapper {
+  max-width: 50%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  display: none;
+}
+
+.accordion-item {
+  border-top: solid 1px;
+  color: #181818;
+  transition: ease 0.5s;
+  padding: 1rem 0;
+}
+
+.accordion-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  width: 100%;
+
+  transition: ease 0.5s;
+}
+
+.content img {
+  display: block;
+  height: 50%;
+}
+
+input + .accordion-text + .content {
+  opacity: 0;
+  height: 0;
+  font-size: 0;
+
+  transition: ease 0.5s;
+}
+
+input:checked + .accordion-text + .content {
+  opacity: 1;
+  height: 100%;
+}
+
+.accordion-wrapper:hover .accordion-text {
+  color: #f2eaea;
+}
+
+.accordion-text .icon {
+  height: 3rem;
+  width: 3rem;
+  background: transparent url(./assets/icons/plus.svg) no-repeat right;
+}
+
+input:checked + .accordion-text .icon {
+  width: 3rem;
+  height: 3rem;
+
+  background: transparent url(./assets/icons/close.svg) no-repeat right;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 1.6rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
