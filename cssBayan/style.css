@@ -77,7 +77,6 @@ input:checked + .accordion-text + .content {
 input:checked + .accordion-text .icon {
   width: 3rem;
   height: 3rem;
-
   background: transparent url(./assets/icons/close.svg) no-repeat right;
 }
 
